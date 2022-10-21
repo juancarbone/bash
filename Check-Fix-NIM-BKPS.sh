@@ -1,5 +1,6 @@
 #!/bin/bash
 hora=$(( 0 + $RANDOM % 9))
+minutos=$(( $RANDOM % 5 + 0 ))
 echo $hora
 fecha=`date +%d``date +%m`
 hostname=`uname -n`
