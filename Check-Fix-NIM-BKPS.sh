@@ -12,7 +12,7 @@ then
         cp /usr/local/bin/mksysbaz* /usr/local/bin/mksysbaz11
         ls -la /usr/local/bin
         cp /var/spool/cron/crontabs/root /var/spool/cron/crontabs/root_bkp_$fecha
-        echo "0 $hora * * 1 /usr/local/bin/mksysbaz11 2>&1 #Remove comment and define proper AZ name for the
+        echo "$minutos $hora * * 1 /usr/local/bin/mksysbaz11 2>&1 #Remove comment and define proper AZ name for the
 script." >> /var/spool/cron/crontabs/root
         ./usr/local/bin/mksysbaz11 &
 elif [[ $hostname == g4 ]]
@@ -21,7 +21,7 @@ then
         cp /usr/local/bin/mksysbaz* /usr/local/bin/mksysbaz1
         ls -la /usr/local/bin
         cp /var/spool/cron/crontabs/root /var/spool/cron/crontabs/root_bkp_$fecha
-        echo "0 $hora * * 1 /usr/local/bin/mksysbaz1 2>&1 #Remove comment and define proper AZ name for the
+        echo "$minutos $hora * * 1 /usr/local/bin/mksysbaz1 2>&1 #Remove comment and define proper AZ name for the
 script." >> /var/spool/cron/crontabs/root
         ./usr/local/bin/mksysbaz1 &
 fi
